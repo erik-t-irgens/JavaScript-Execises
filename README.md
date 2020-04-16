@@ -39,6 +39,8 @@ In the project directory, you can run:
 Runs the string reversal JavaScript logic, using the parameters supplied as the string within the example.<br />
 This method was designed to attempt to reverse a string with no built in reversal methods, while minifying memory overhead.
 
+---
+
 ### `node link-list-scratch.js`
 
 Runs the link list JavaScript logic, using the provided methods that are called at the bottom of said file. <br />
@@ -123,7 +125,7 @@ This method will print the node(s) containing provided data, and the location of
 * data - The data to find within the list.
 
 
-
+---
 
 
 ## Support and contact details
