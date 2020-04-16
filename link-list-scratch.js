@@ -225,6 +225,7 @@ class LinkedList {
 //* USING THE METHODS/TESTS
 const linkedList = new LinkedList();
 
+// *Example method tests
 // linkedList.insertFirst(100)
 // linkedList.insertFirst(200)
 // linkedList.insertFirst(2123120)
@@ -233,19 +234,26 @@ const linkedList = new LinkedList();
 // linkedList.getAt(1)
 // linkedList.removeAt(0)
 // linkedList.removeLast()
+// linkedList.clearList()
 
-linkedList.insertLast(1)
-linkedList.insertLast(2)
-linkedList.insertLast(3)
-linkedList.insertLast(4)
-linkedList.insertLast(5)
-linkedList.insertLast(6)
-linkedList.insertLast(7)
-linkedList.insertLast(8)
-linkedList.insertLast(9)
-linkedList.insertLast(4)
-linkedList.findNode(4) // Returns 2 different nodes, and their indicies
+// linkedList.insertLast(1)
+// linkedList.insertLast(2)
+// linkedList.insertLast(3)
+// linkedList.insertLast(4)
+// linkedList.insertLast(5)
+// linkedList.insertLast(6)
+// linkedList.insertLast(7)
+// linkedList.insertLast(8)
+// linkedList.insertLast(9)
+// linkedList.insertLast(4)
+// linkedList.findNode(4) // Returns 2 different nodes, and their indicies
 
+// ? Place Methods below using the above syntax
+
+
+
+
+// ? Leave these to see results in the console.
 
 linkedList.printListData()
 console.log("Final size: " + linkedList.size)
