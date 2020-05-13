@@ -1,4 +1,9 @@
-// A linked list is a list of nodes which are linked to each other through reference. These nodes reference each other sequentially. 
+// A linked list is a list of nodes which are linked to each other through reference. These nodes reference each other sequentially.
+
+//* Terminology: 
+// traversal (partial, complete) - meaning to read all or some of the nodes in the linked list in order to complete a task. If a node isn't found in a function, for instance, it completes a complete traversal. 
+// step - the process of moving from one node to another. 
+// pass - a full, complete traversal (how many passes does it take to accomplish a task)
 
 
 // * NODES
@@ -162,6 +167,41 @@ class LinkedList {
         }
     }
 
+    //* REMOVE NTH FROM END
+
+    removeFromNth(n) {
+        // edge
+        if (n > this.size || n <= 0 || this.size == 0) {
+            return
+        }
+
+        let curr1 = this.head
+        let prev1
+        let counter = 0
+
+        let curr2 = this.head
+        let prev2
+        let counter2 = 0
+
+        while (curr1.pointer != null) {
+            prev1 = curr1
+            curr1 = curr1.pointer
+            counter++
+
+            if (counter2 < n) {
+                counter2++
+            }
+            if (counter2 == n) {
+                prev2 = curr2
+                curr2 = curr2.pointer
+            }
+        }
+        prev2.pointer = curr2.pointer
+        console.log("Node to be removed", curr2)
+        curr2 = null
+        this.size--
+    }
+
     //* CLEAR LIST
 
     // This is pretty simple. All we must do is clear the head, and the size. 
@@ -236,11 +276,15 @@ const linkedList = new LinkedList();
 // linkedList.removeLast()
 // linkedList.clearList()
 
-// linkedList.insertLast(1)
-// linkedList.insertLast(2)
-// linkedList.insertLast(3)
-// linkedList.insertLast(4)
-// linkedList.insertLast(5)
+linkedList.insertLast(1)
+linkedList.insertLast(2)
+linkedList.insertLast(3)
+linkedList.insertLast(4)
+linkedList.insertLast(5)
+
+linkedList.printListData()
+linkedList.removeFromNth(2)
+linkedList.printListData()
 // linkedList.insertLast(6)
 // linkedList.insertLast(7)
 // linkedList.insertLast(8)
@@ -255,6 +299,6 @@ const linkedList = new LinkedList();
 
 // ? Leave these to see results in the console.
 
-linkedList.printListData()
-console.log("Final size: " + linkedList.size)
+// linkedList.printListData()
+// console.log("Final size: " + linkedList.size)
 
